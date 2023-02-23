@@ -1,0 +1,217 @@
+:root{
+	--light-gray: #eeeeee;
+  	--med-gray: #555;
+	--dark-gray: #222;
+	--white: #fff;
+	--black: #000;
+	--cast-iron-gray: #353535;
+	--creamy: #F3EFE0;
+	--light-blue: #8DCBE6;
+
+	
+	--box-shadow: -5px 5px 5px var(--med-gray);
+	--hover-shadow: -3px 3px 6px var(--med-gray);
+	
+	font-size: 16px;
+}
+
+html{
+	background-color: var(--light-gray);
+}
+
+/* -- The site is meant to be a single page, fixed 1280px wide site. You may makde it responsive to earn extra credit, but only if your JS is working correctly first. Focus on the functionality. -- */
+body{
+	width: 100%;
+	max-width: 1280px;
+	margin: 0 auto;
+	color: var(--dark-gray);
+	line-height: 1.35;
+	font-family: sans-serif;
+	box-sizing: border-box;
+}
+
+/* Hidden content for screen reader users - code from: https://webaim.org/techniques/css/invisiblecontent/ */
+.sr-only {
+	position: absolute;
+	left: -10000px;
+	top: auto;
+	width: 1px;
+	height: 1px;
+	overflow: hidden;
+}
+
+/* ----- HEADER ----- */
+header{
+	padding: 1rem;
+	margin: 0 0 2rem 0;
+	background-color: var(--white);
+}
+
+/* ----- HEADINGS ----- */
+h1, h2, h3, h4{
+	text-align: center;
+	font-weight: bold;
+}
+
+h1{
+	font-size: 2rem;
+	margin: 1rem;
+}
+
+h2{
+	font-size: 1.65rem;
+	margin: 0.75rem;
+}
+
+h3{
+	font-size: 1.45rem;
+	margin: 0.5rem;
+}
+
+h4{
+	font-size: 1.3rem;
+	margin: 0.35rem;
+}
+
+/* ----- IMAGES ----- */
+img{
+	display: block;
+	margin: 0 auto;
+}
+
+/* ----- PARAGRAPHS ----- */
+p{
+	max-width: 65ch;
+	padding: 1rem 0;
+	margin: 0 auto;
+}
+
+/* ----- BUTTONS/SUBMIT ----- */
+button, input[type="submit"]{
+	display: block;
+	padding: 1rem;
+	background-color: var(--dark-gray);
+	color: var(--white);
+	border: none;
+	box-shadow: var(--box-shadow);
+}
+
+input[type="submit"]{
+	width: 90%;
+	margin: 0 auto;
+}
+
+/* ----- FORM CONTROLS ----- */
+input, label{
+	display: block;
+	font-size: 1rem;
+	font-family: sans-serif;
+}
+
+label{
+	margin: 0.5rem 0 0.25rem 0;
+}
+
+input{
+	padding: 0.5rem 0.25rem;
+	margin: 0 auto 1rem auto;
+	width: calc(100% - 1rem);
+}
+
+/* ----- FOR ERROR MESSAGES AND INPUT STYLES IN FORMS ----- */
+.message{
+  display: none;
+  color: var(--orange);
+  font-size: 1.2em;
+  margin: 0.25em 0;
+  font-weight: bold;
+}
+
+.error{
+  font-size: 1em;
+  display: block;
+}
+
+.errorInput{
+  border: 1px solid var(--orange);
+}
+
+/* ----- BACKGROUND COLORS/WIDTHS/PADDING ON INDIVIDUAL SECTIONS ----- */
+#switcher1, #game1 {
+	background-color: var(--white);
+	padding: 1rem;
+	width: calc(100% - 2rem);
+	max-width: 1280px;
+}
+
+/* ----- PRODUCT SWITCHER EXAMPLE 1 ----- */
+/* ----- CLASSES FOR PRODUCT SWITCHER ----- */
+#switcher1 .currentItem{
+	display: grid;
+	grid-template-columns: 1fr 1fr;
+	grid-template-rows: 1fr 2fr;
+	gap: 1rem;
+}
+
+.hiddenItem{
+	display: none;
+}
+
+#switcherButtons{
+	display: grid;
+	grid-template-columns: 1fr 1fr 1fr;
+	gap: 1rem;
+	width: fit-content;
+	margin: 2rem auto;
+}
+
+#switcher1 img{
+	grid-row: 1/-1;
+}
+
+#switcher1 h3{
+	grid-column: 2/-1;
+	align-self: end;
+}
+
+/* ----- GUESSING GAME EXAMPLE 1 ----- */
+#game1{
+	margin-top: 2rem;	
+	padding-bottom: 2rem;
+}
+
+#game1 div{
+	display: grid;
+	grid-template-columns: 1fr 1fr;
+	gap: 1rem;
+	max-width: 800px;
+	margin: 0 auto;
+}
+
+#game1 h2{
+	grid-column: 1/-1;
+}
+
+#game1 form{
+	padding: 1rem;
+}
+
+#gameDisplay p{
+	padding: 0.5rem;
+}
+
+
+/* ----- FOOTER ----- */
+footer{
+	padding: 1rem 0;
+	text-align: center;
+	background-color: var(--white);
+	margin-top: 2rem;
+}
+
+/* ----- HOVER STYLES ----- */
+@media (hover:hover){
+	button:hover, input[type="submit"]:hover{
+		box-shadow: var(--hover-shadow);
+	}
+}
