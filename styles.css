@@ -1,3 +1,5 @@
+/* Shawn Christopher */
+
 :root{
 	--light-gray: #eeeeee;
   	--med-gray: #555;
@@ -21,7 +23,7 @@ main {
 	color: var(--white);
 }
 
-/* -- The site is meant to be a single page, fixed 1280px wide site. You may makde it responsive to earn extra credit, but only if your JS is working correctly first. Focus on the functionality. -- */
+/* -- The site is meant to be a single page, fixed 1280px wide site. You may make it responsive to earn extra credit, but only if your JS is working correctly first. Focus on the functionality. -- */
 body{
 	width: 100%;
 	max-width: 1280px;
