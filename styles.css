@@ -7,11 +7,8 @@
 	--cast-iron-gray: #353535;
 	--creamy: #F3EFE0;
 	--light-blue: #8DCBE6;
-
-	
 	--box-shadow: -5px 5px 5px var(--med-gray);
 	--hover-shadow: -3px 3px 6px var(--med-gray);
-	
 	font-size: 16px;
 }
 
@@ -19,14 +16,19 @@ html{
 	background-color: var(--light-gray);
 }
 
+main {
+	background-color: var(--cast-iron-gray);
+	color: var(--white);
+}
+
 /* -- The site is meant to be a single page, fixed 1280px wide site. You may makde it responsive to earn extra credit, but only if your JS is working correctly first. Focus on the functionality. -- */
 body{
 	width: 100%;
 	max-width: 1280px;
-	margin: 0 auto;
+	margin: 50px auto;
 	color: var(--dark-gray);
 	line-height: 1.35;
-	font-family: sans-serif;
+	font-family: Tahoma, Arial, sans-serif;
 	box-sizing: border-box;
 }
 
@@ -40,17 +42,69 @@ body{
 	overflow: hidden;
 }
 
+
 /* ----- HEADER ----- */
 header{
 	padding: 1rem;
-	margin: 0 0 2rem 0;
-	background-color: var(--white);
+	margin: 0;
+	background-color: var(--dark-gray);
+	color: var(--white);
+	display: grid;
+	grid-template-columns: 1fr 1fr;
+	gap: 1rem;	
 }
 
+h1 {
+	grid-column: 1/2;
+
+}
+
+nav {
+	grid-column: 2/3;
+	text-decoration: none;
+}
+
+li {
+	display: inline-block;
+	text-decoration: none;
+	padding: 25px;
+}
+
+li:hover {
+	text-decoration: underline;
+}
+a, a:visited {
+	text-decoration: none;
+	color:var(--white);
+	font-family: Tahoma, Arial, sans-serif;
+}
+
+header div {
+	grid-column: 1/-1;	
+	margin: auto;
+	font-size: 1.25rem;
+}
+header p {
+	margin: 0;
+	padding: 0;
+}
+
+#bold {
+	font-weight: 800;
+}
+
+.italic {
+	font-style: italic;
+	font-weight: 100;
+	color: var(--light-gray);
+}
+
+
 /* ----- HEADINGS ----- */
-h1, h2, h3, h4{
-	text-align: center;
+h1, h2, h3 {
+	text-align: left;
 	font-weight: bold;
+	
 }
 
 h1{
@@ -59,18 +113,20 @@ h1{
 }
 
 h2{
-	font-size: 1.65rem;
-	margin: 0.75rem;
+	font-size: 1.50rem;
+	margin-left: 50px;
+	margin-right: 50px;
+	margin-top: 2px;
+	margin-bottom: 12px;
+	padding-top: 10px;
 }
 
 h3{
-	font-size: 1.45rem;
-	margin: 0.5rem;
-}
-
-h4{
-	font-size: 1.3rem;
-	margin: 0.35rem;
+	font-size: 1.35rem;
+	margin-left: 58px;
+	margin-right: 50px;
+	margin-top: 12px;
+	margin-bottom: 12px;
 }
 
 /* ----- IMAGES ----- */
@@ -81,9 +137,13 @@ img{
 
 /* ----- PARAGRAPHS ----- */
 p{
-	max-width: 65ch;
 	padding: 1rem 0;
-	margin: 0 auto;
+	margin-left: 50px;
+	margin-right: 50px;
+}
+
+#switcher, #game {
+	color: var(--cast-iron-gray);
 }
 
 /* ----- BUTTONS/SUBMIT ----- */
@@ -118,6 +178,10 @@ input{
 	width: calc(100% - 1rem);
 }
 
+textarea {
+	width: 100%;
+}
+
 /* ----- FOR ERROR MESSAGES AND INPUT STYLES IN FORMS ----- */
 .message{
   display: none;
@@ -137,7 +201,7 @@ input{
 }
 
 /* ----- BACKGROUND COLORS/WIDTHS/PADDING ON INDIVIDUAL SECTIONS ----- */
-#switcher1, #game1 {
+#switcher, #game {
 	background-color: var(--white);
 	padding: 1rem;
 	width: calc(100% - 2rem);
@@ -146,7 +210,7 @@ input{
 
 /* ----- PRODUCT SWITCHER EXAMPLE 1 ----- */
 /* ----- CLASSES FOR PRODUCT SWITCHER ----- */
-#switcher1 .currentItem{
+#switcher .currentItem{
 	display: grid;
 	grid-template-columns: 1fr 1fr;
 	grid-template-rows: 1fr 2fr;
@@ -165,22 +229,23 @@ input{
 	margin: 2rem auto;
 }
 
-#switcher1 img{
+#switcher img{
 	grid-row: 1/-1;
 }
 
-#switcher1 h3{
+#switcher h3{
 	grid-column: 2/-1;
 	align-self: end;
 }
 
-/* ----- GUESSING GAME EXAMPLE 1 ----- */
-#game1{
+/* ----- GUESSING GAME ----- */
+#game{
 	margin-top: 2rem;	
 	padding-bottom: 2rem;
+	background-color: var(--creamy);
 }
 
-#game1 div{
+#game div{
 	display: grid;
 	grid-template-columns: 1fr 1fr;
 	gap: 1rem;
@@ -188,11 +253,12 @@ input{
 	margin: 0 auto;
 }
 
-#game1 h2{
+#game h2{
 	grid-column: 1/-1;
+	text-align: center;
 }
 
-#game1 form{
+#game form{
 	padding: 1rem;
 }
 
@@ -205,8 +271,35 @@ input{
 footer{
 	padding: 1rem 0;
 	text-align: center;
-	background-color: var(--white);
-	margin-top: 2rem;
+	background-color: var(--med-gray);
+	color: var(--white);
+	margin-top: 0;
+	display: grid;
+	grid-template-columns: 1fr 1fr;
+}
+footer h2 {
+	font-size: 1.35rem;
+	font-weight: 600;
+}
+
+#footerLeft {
+	grid-column: 1/2;
+	text-align: left;
+}
+
+footer address {
+	margin-left: 100px;
+}
+
+div #copy p {
+	text-align: center;
+}
+
+#form  {
+	grid-column: 2/3;
+	text-align: left;
+	margin-left: 50px;
+	margin-right: 50px;
 }
 
 /* ----- HOVER STYLES ----- */

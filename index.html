@@ -8,16 +8,24 @@
     <script src="js.js"></script>
     <link href="styles.css" rel="stylesheet">
     <title>Redemption Cast Iron | Cookware that Stands the Test of Time</title>
-    <meta name="description" content="  ">
-    <meta name="robots" content="follow, index, max-snippet:-1, max-video-preview:-1, max-image-preview:large"/>
+    <meta name="description" content="Redemption Cast Iron is spreading the word on the benefits of cooking and collecting vintage cast iron. Cookware that is versatile, dependable, and (best of all) Nonstick.">
+    <meta name="robots" content="follow, index, max-snippet:-1, max-video-preview:-1, max-image-preview:large">
 
 </head>
 <body>
     <header>
         <h1>Redemption Cast Iron</h1>
-        <p><span id="bold">re·demp·tion:  </span><span id="itaL">/rəˈdem(p)SH(ə)n/</span></p>
-        <p>     The act, process, or an instance of restoration or repairing a defect.</p>
-                 
+        <nav>
+            <ul>
+                <li><a href="#about">About</a></li>
+                <li><a href="#castIron">Vintage Cast Iron</a></li>
+                <li><a href="#switcher">Products</a></li>
+                <li><a href="#game">Game</a></li>
+            </ul>
+        </nav>
+        <div>
+            <p><span id="bold">re·demp·tion:  </span> <span class="italic">... rə`demp`SHun</span> <br>  1.  The act, process, or an instance of restoration or repairing a defect.<br> . . .</p>
+        </div>
     </header>
     <!-- FROM THE REQUIREMENTS:
     Your coded site, to include semantic HTML, appropriate CSS (your site is not required to be responsive), and JS. ALL of the code written for this page must be written from scratch by you. Please see and review the academic integrity policy for more information. First, you'll have some required elements:
@@ -26,28 +34,31 @@
     
     <!-- This pen uses CSS Reset - If you would like to start with this HTML/CSS as a base in your project, you will need to use the CSS reset code as well or the styles won't work in the same way for you -->
     <main>
-        <section>
-        <p>Vintage cast iron cookware has become increasingly popular among home cooks and collectors alike. These sturdy and durable kitchen staples have been around for centuries, and their continued popularity is a testament to their practicality, versatility, and durability.</p>
-        <p>Vintage cast iron cookware is popular for its ability to retain and evenly distribute across its surface. This is ideal for cooking dishes that require a consistent temperature.  An additional benefit is its versatility. Cast iron can be used for a variety of cooking techniques, including searing, sautéing, frying, and baking. They can also be used on a variety of cooking surfaces, including gas stoves, electric stoves, induction cooktops, and over an open fire!</p>
-        
-
+        <section id="about">
+            <h2>About</h2>
+            <p>We are dedicated to spreading the gospel of cooking with vintage cast iron cookware.  These are not some rusted relics from days gone by.  We want everyone to to appreciate the classics.  These are superb for all types of cooking, as well as generational collecting.</p>
         </section>
-        <section id="switcher1">
+        <section id="castIron">
+            <h2>Vintage Cast Iron</h2>
+            <p>Vintage cast iron cookware has become increasingly popular among home cooks and collectors alike. These sturdy and durable kitchen staples have been around for centuries, and their continued popularity is a testament to their practicality, versatility, and durability.</p>
+            <p>Vintage cast iron cookware is popular for its ability to retain and evenly distribute across its surface. This is ideal for cooking dishes that require a consistent temperature.  An additional benefit is its versatility. Cast iron can be used for a variety of cooking techniques, including searing, sautéing, frying, and baking. They can also be used on a variety of cooking surfaces, including gas stoves, electric stoves, induction cooktops, and over an open fire!</p>
+        </section>
+        <section id="switcher">
             <h2>Some of Our Vintage Cookware</h2>
             <section id="product1" class="currentItem">
-                <h3>Heading Describing Item 1</h3>
-                <img src="waffleIron.jpeg" alt="  ">
-                <p>Make waffles like your grandparent or great-grandparents did when they were kids.  This rare Fanner Mfg. Co. waffle iron makes outstanding waffles and can be passed down for generations to come.  The nonstick surface is perfectly seasoned.  No need to deal with electronic parts that give out on modern waffle irons.</p>
+                <h3>Impeccable Fanner Waffle Iron</h3>
+                <img src="waffleIron.jpeg" alt="antique Fanner Manfucturing cast iron waffle iron in pristine condition set down on rustic planks of stained wood">
+                <p>Make waffles like your grandparents or great-grandparents did when they were kids.  This rare Fanner Mfg. Co. waffle iron makes outstanding waffles and can be passed down for generations to come.  The nonstick surface is perfectly seasoned.  No need to deal with electronic parts that give out on modern waffle irons.</p>
             </section>
             <section id="product2" class="hiddenItem">
-                <h3>Heading Describing Item 2</h3>
-                <img src="skillet.jpeg" alt="  ">
+                <h3>Classic Griswold No. 8 Skillet</h3>
+                <img src="skillet.jpeg" alt="bottom view of a fully restored Griswold number 8 cast iron skillet set down on rustic planks of stained woods">
                 <p>This is an all-time classic Griswold No. 8 skillet.  Impeccably restored and ready to use.  Great for home and outdoor use.  This is the workhorse of cast iron cookware.  These skillets are great for making a variety of your favorites.</p>
             </section>
             <section id="product3" class="hiddenItem">
-                <h3>Heading Describing Item 3</h3>
-                <img src="lodgeDutchOven.jpeg" alt="  ">
-                <p>Lodge may be the prominent modern cast iron manufacturer, but this vintage No. 8 Dutch Over shows that they have been around and making great cookware for decades.</p>
+                <h3>Lodge No. 8 Dutch Oven</h3>
+                <img src="lodgeDutchOven.jpeg" alt="vintage Lodge number 8 cast iron dutch over in great condition set atop rustic planks of stained wood">
+                <p>Lodge may be the prominent modern cast iron manufacturer, but this vintage No. 8 Dutch Oven shows that they have been around and making great cookware for decades.</p>
             </section>
             <section id="switcherButtons">
                 <h2 class="sr-only">Click on a Button to View a Product</h2>
@@ -57,7 +68,7 @@
             </section>
         </section>
                 
-        <section id="game1">
+        <section id="game">
             <div>
                 <h2>Would You Like to Play a Game?</h2>
                 <form>
@@ -72,63 +83,57 @@
                     <p id="gameOutput">This is where the random number and user guess would display, along with a message about whether they won or not.</p>
                 </section>
             </div>
-        </section>
-        <section id="contact">
-           
-
-        </section>
-       
+        </section>       
     </main>
     <footer>
-        <section class="left">
-            <div id="footerLeft">
-                <h2>Contact Info:</h2>
-                <p>&copy;2023</p>
+        <div id="footerLeft">
+            <h2>Contact Info:</h2>
+            <p>You can contact us at:</p>
+                <address>
+                    <a href="mailto:fiction@redemptioncastiron.com">email: fiction@redemptioncastiron.com</a><br>
+                    <a href="tel:+18005555555">call: (800)555-5555</a><br><br>
+                </address>
+            <div id="copy">
+                <p>&copy;2023<br>For Educational Purposes Only</p>
             </div>
-        </section>
-        <section class="right">
-            <div id="form">
-                <h2>Send Us A Message<span class="form-required">*required</span></h2>
-                <form method="post" action="https://wp.zybooks.com/form-viewer.php">
-                    <div id="names">
-                        <label for="fName">First Name<span class="required">*</span></label>
-                        <input type="text" name="fName" id="fName" autocomplete="given-name" placeholder="First Name" required>
-                        <!-- custom input styles from https://moderncss.dev/custom-css-styles-for-form-inputs-and-textareas/ -->
-                        <label for="lName">Last Name<span class="required">*</span></label>
-                        <input type="text" name="lName" id="lName" autocomplete="family-name" placeholder="Last Name" required>
-                    </div>
-                    <div id="nums">
-                        <fieldset>
-                            <legend>Contact Method<span class="required">*</span></legend>
-                            <!-- custom radio button styles from https://moderncss.dev/pure-css-custom-styled-radio-buttons/ -->
-                            <label for="prefEmail">
-                                <span class="radio-input">
-                                    <input type="radio" name="contactPref" id="prefEmail" required checked>
-                                    <span class="radio-control"></span>
-                                </span>
-                                <span class="radio-label">Email</span>
-                            </label>
-                            <label for="prefPhone">
-                                <span class="radio-input">
-                                    <input type="radio" name="contactPref" id="prefPhone">
-                                    <span class="radio-control"></span>
-                                </span>
-                                <span class="radio-label">Phone</span>
-                            </label>
-                        </fieldset>
-                        <label for="email">Email Address<span class="required">*</span></label>
-                        <input type="email" name="email" id="email" autocomplete="email" placeholder="Email Address" required>
-                        <label for="phone">Phone Number<span class="required">*</span></label>
-                        <input type="tel" name="phone" id="phone" autocomplete="tel" placeholder="Phone Number" required>
-                    </div>
-                    <label for="myComments" id="label-block">Comments</label>
-                    <textarea name="myComments" id="myComments" rows="5"></textarea>
-    
-                    <input type="submit" id="mySubmit" value="Submit Me">        
-    
-                </form>
-            </div>
-        </section>
+        </div>
+        <div id="form">
+            <h2>Send Us A Message</h2>
+            <form method="post" action="https://wp.zybooks.com/form-viewer.php">
+                <div id="names">
+                    <label for="fName">First Name<span class="required">* (* required)</span></label>
+                    <input type="text" name="fName" id="fName" placeholder="First Name" required>
+                    <label for="lName">Last Name<span class="required">*</span></label>
+                    <input type="text" name="lName" id="lName" placeholder="Last Name" required>
+                </div>
+                <div id="contactInfo">
+                    <fieldset>
+                        <legend>Preferred Contact Method<span class="required">*</span></legend>
+                        <label for="prefEmail">
+                            <span class="radio-input">
+                                <input type="radio" name="contactPref" id="prefEmail" required checked>
+                                <span class="radio-control"></span>
+                            </span>
+                            <span class="radio-label">Email</span>
+                        </label>
+                        <label for="prefPhone">
+                            <span class="radio-input">
+                                <input type="radio" name="contactPref" id="prefPhone">
+                                <span class="radio-control"></span>
+                            </span>
+                            <span class="radio-label">Phone</span>
+                        </label>
+                    </fieldset>
+                    <label for="email">Email Address<span class="required">*</span></label>
+                    <input type="email" name="email" id="email" placeholder="Email Address" required>
+                    <label for="phone">Phone Number<span class="required">*</span></label>
+                    <input type="tel" name="phone" id="phone" placeholder="Phone Number" required>
+                </div>
+                <label for="myComments" id="label-block">Comments</label>
+                <textarea name="myComments" id="myComments" rows="5"></textarea>
+                <input type="submit" id="mySubmit" value="Submit">        
+            </form>
+        </div>
     </footer> 
 </body>
 </html>
