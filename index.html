@@ -5,7 +5,7 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta name="author" content="Shawn Christopher">
-    <script src="js.js"></script>
+    <script src="js.js" async></script>
     <link href="styles.css" rel="stylesheet">
     <title>Redemption Cast Iron | Cookware that Stands the Test of Time</title>
     <meta name="description" content="Redemption Cast Iron is spreading the word on the benefits of cooking and collecting vintage cast iron. Cookware that is versatile, dependable, and (best of all) Nonstick.">
@@ -14,6 +14,7 @@
 </head>
 <body>
     <header>
+        <button onclick="darkMode()">Dark Mode</button>
         <h1>Redemption Cast Iron</h1>
         <nav>
             <ul>
@@ -46,41 +47,42 @@
         <section id="switcher">
             <h2>Some of Our Vintage Cookware</h2>
             <section id="product1" class="currentItem">
-                <h3>Impeccable Fanner Waffle Iron</h3>
-                <img src="waffleIron.jpeg" alt="antique Fanner Manfucturing cast iron waffle iron in pristine condition set down on rustic planks of stained wood">
-                <p>Make waffles like your grandparents or great-grandparents did when they were kids.  This rare Fanner Mfg. Co. waffle iron makes outstanding waffles and can be passed down for generations to come.  The nonstick surface is perfectly seasoned.  No need to deal with electronic parts that give out on modern waffle irons.</p>
+                <h3 id="productTitle">Impeccable Fanner Waffle Iron</h3>
+                <img src="waffleIron.jpeg" id="productImage" alt="antique Fanner Manfucturing cast iron waffle iron in pristine condition set down on rustic planks of stained wood">
+                <p id="productDescription">Make waffles like your grandparents or great-grandparents did when they were kids.  This rare Fanner Mfg. Co. waffle iron makes outstanding waffles and can be passed down for generations to come.  The nonstick surface is perfectly seasoned.  No need to deal with electronic parts that give out on modern waffle irons.</p>
             </section>
             <section id="product2" class="hiddenItem">
-                <h3>Classic Griswold No. 8 Skillet</h3>
-                <img src="skillet.jpeg" alt="bottom view of a fully restored Griswold number 8 cast iron skillet set down on rustic planks of stained woods">
-                <p>This is an all-time classic Griswold No. 8 skillet.  Impeccably restored and ready to use.  Great for home and outdoor use.  This is the workhorse of cast iron cookware.  These skillets are great for making a variety of your favorites.</p>
+                <h3 id="productTitle">Classic Griswold No. 8 Skillet</h3>
+                <img src="skillet.jpeg" id="productImage" alt="bottom view of a fully restored Griswold number 8 cast iron skillet set down on rustic planks of stained woods">
+                <p id="productDescription">This is an all-time classic Griswold No. 8 skillet.  Impeccably restored and ready to use.  Great for home and outdoor use.  This is the workhorse of cast iron cookware.  These skillets are great for making a variety of your favorites.</p>
             </section>
             <section id="product3" class="hiddenItem">
-                <h3>Lodge No. 8 Dutch Oven</h3>
-                <img src="lodgeDutchOven.jpeg" alt="vintage Lodge number 8 cast iron dutch over in great condition set atop rustic planks of stained wood">
-                <p>Lodge may be the prominent modern cast iron manufacturer, but this vintage No. 8 Dutch Oven shows that they have been around and making great cookware for decades.</p>
+                <h3 id="productTitle">Lodge No. 8 Dutch Oven</h3>
+                <img src="lodgeDutchOven.jpeg" id="productImage" alt="vintage Lodge number 8 cast iron dutch over in great condition set atop rustic planks of stained wood">
+                <p id="pproductDescription">Lodge may be the prominent modern cast iron manufacturer, but this vintage No. 8 Dutch Oven shows that they have been around and making great cookware for decades.</p>
             </section>
             <section id="switcherButtons">
                 <h2 class="sr-only">Click on a Button to View a Product</h2>
-                <button id="btn1">View Item 1</button>
-                <button id="btn2">View Item 2</button>
-                <button id="btn3">View Item 3</button>
+                <button id="btn1" onclick="viewProduct1()">View Item 1</button>
+                <button id="btn2" onclick="viewProduct2()">View Item 2</button>
+                <button id="btn3" onclick="viewProduct3()">View Item 3</button>
             </section>
         </section>
                 
         <section id="game">
             <div>
                 <h2>Would You Like to Play a Game?</h2>
-                <form>
+                <section>
+                    <h3 class="sr-only">Game Input</h3>
                     <label for="numGuess">Enter a Number Between 1 and 10:</label>
                     <span class="message">Please enter a number from 1 to 10</span>
                     <input type="number" name="numGuess" id="numGuess">
-                    <input type="submit" name="guessGame" id="guessGame" value="Play the Game!">
-                </form>
+                    <button onclick="guessGame()">Play the Game!</button>
+                </section> 
                 <section id="gameDisplay">
                     <h3>Guess a Number!</h3>
                     <p>Enter a number between 1 and 10 in the box to the left and click the button to play. If your number matches, you win!</p>
-                    <p id="gameOutput">This is where the random number and user guess would display, along with a message about whether they won or not.</p>
+                    <p id="gameOutput"></p>
                 </section>
             </div>
         </section>       
