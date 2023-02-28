@@ -2,6 +2,7 @@
 
 :root{
 	--light-gray: #eeeeee;
+	--gray: #a5a1a1;
   	--med-gray: #555;
 	--dark-gray: #222;
 	--white: #fff;
@@ -9,13 +10,14 @@
 	--cast-iron-gray: #353535;
 	--creamy: #F3EFE0;
 	--light-blue: #8DCBE6;
+	--brown: #4f4844;
 	--box-shadow: -5px 5px 5px var(--med-gray);
 	--hover-shadow: -3px 3px 6px var(--med-gray);
 	font-size: 16px;
 }
 
-html{
-	background-color: var(--light-gray);
+html {
+	background-color: var(--gray);
 }
 
 main {
@@ -54,6 +56,15 @@ header{
 	display: grid;
 	grid-template-columns: 1fr 1fr;
 	gap: 1rem;	
+}
+header button {
+	width: 11ch;
+	grid-column: 1/-1;
+	padding: 5px;
+	background-color: var(--cast-iron-gray);
+	color: var(--light-blue);
+	border-radius: 10%;
+	box-shadow: none;
 }
 
 h1 {
@@ -101,6 +112,18 @@ header p {
 	color: var(--light-gray);
 }
 
+/* ----- DARK MODE ------- */
+
+
+.dark-mode #switcher {
+	background-color: var(--med-gray);
+	color: var(--white);
+}
+
+.dark-mode #game {
+	background-color: var(--brown);
+	color: var(--white);
+}
 
 /* ----- HEADINGS ----- */
 h1, h2, h3 {
@@ -165,7 +188,7 @@ input[type="submit"]{
 
 /* ----- FORM CONTROLS ----- */
 input, label{
-	display: block;
+	display: inline-block;
 	font-size: 1rem;
 	font-family: sans-serif;
 }
@@ -178,6 +201,10 @@ input{
 	padding: 0.5rem 0.25rem;
 	margin: 0 auto 1rem auto;
 	width: calc(100% - 1rem);
+}
+
+fieldset {
+	text-align: center;
 }
 
 textarea {
@@ -271,14 +298,14 @@ textarea {
 
 /* ----- FOOTER ----- */
 footer{
-	padding: 1rem 0;
-	text-align: center;
+	padding: 1rem 0;	
 	background-color: var(--med-gray);
 	color: var(--white);
 	margin-top: 0;
 	display: grid;
 	grid-template-columns: 1fr 1fr;
 }
+
 footer h2 {
 	font-size: 1.35rem;
 	font-weight: 600;
